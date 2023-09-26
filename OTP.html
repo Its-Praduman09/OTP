@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #input1
+        {
+            width:400px;
+            height:100px;
+            border:2px solid blueviolet;
+            margin-top:50px;
+        }
+        button
+        {
+            width:200px;
+            height:40px;
+            font-size:22px;
+            background-color:aqua;
+            margin-top:20px;
+            color:black;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Generate OTP 4-Digits</h1>
+    <div id="input1"></div>
+    <button onclick="OTP()">Generate OTP</button>
+</center>
+    <script>
+        const OTP=()=> // this is arro function
+        {
+            let store=document.getElementById('input1');
+            store.style.color='red';
+            store.style.fontSize='50px';
+            store.style.textAlign='center';
+            let str='';
+            for(r=0; r<4; r++)
+            {
+            store=(Math.floor(Math.random()*10));
+            str+=store;
+            }
+            document.getElementById('input1').innerHTML=str;
+            
+        }
+    </script>
+</body>
+</html>
